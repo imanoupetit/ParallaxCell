@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U36-EJ-613">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="O4d-IA-Lu1">
+            <objects>
+                <tableViewController id="U36-EJ-613" customClass="TableViewController" customModule="Parallax" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="188" sectionHeaderHeight="28" sectionFooterHeight="28" id="mc3-az-Fww">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParallaxImageCell" rowHeight="200" id="M3h-Kq-uS0" customClass="ParallaxImageCell" customModule="Parallax" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M3h-Kq-uS0" id="Zcs-IT-oDQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fz-BC-mcr">
+                                            <rect key="frame" x="0.0" y="-50.5" width="375" height="300.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="300" id="Lid-gn-1EJ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0fz-BC-mcr" firstAttribute="centerY" secondItem="Zcs-IT-oDQ" secondAttribute="centerY" id="NaA-sl-Qz0"/>
+                                        <constraint firstAttribute="trailing" secondItem="0fz-BC-mcr" secondAttribute="trailing" id="OST-SU-YNQ"/>
+                                        <constraint firstItem="0fz-BC-mcr" firstAttribute="leading" secondItem="Zcs-IT-oDQ" secondAttribute="leading" id="SjB-0X-5a8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="parallaxCenterConstraint" destination="NaA-sl-Qz0" id="wpt-Bm-UWY"/>
+                                    <outlet property="parallaxImageView" destination="0fz-BC-mcr" id="NYL-tO-i7w"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U36-EJ-613" id="MOp-lM-AzD"/>
+                            <outlet property="delegate" destination="U36-EJ-613" id="A1t-Pq-xan"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCl-sA-w9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="497"/>
+        </scene>
+    </scenes>
+</document>
